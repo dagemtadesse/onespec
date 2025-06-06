@@ -1,16 +1,12 @@
-import { Card, Button } from "@chakra-ui/react";
 import { Handle, Position } from "@xyflow/react";
+import { Button } from "@/components/ui/button";
 
 export const DraggableCard = () => {
   return (
-    <Card.Root>
+    <div>
       <Handle type="target" position={Position.Top} />
-      <Card.Header />
-      <Card.Body>
-        <Button> Node </Button>
-      </Card.Body>
-      <Card.Footer />
+      <Button>Click me</Button>
       <Handle type="source" position={Position.Bottom} />
-    </Card.Root>
+    </div>
   );
 };

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Box } from "@chakra-ui/react";
 
 import "@xyflow/react/dist/style.css";
 import {
@@ -48,7 +47,7 @@ export const Canvas = () => {
     setNodes((nds) => applyNodeChanges(changes, nds));
 
   return (
-    <Box h={"100vh"}>
+    <div style={{height: '100vh'}}>
       <ReactFlow
         nodes={nodes}
         edges={edges}
@@ -60,6 +59,6 @@ export const Canvas = () => {
         <Background />
         <Controls />
       </ReactFlow>
-    </Box>
+    </div>
   );
 };
